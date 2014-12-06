@@ -23,13 +23,12 @@ class NumberFinder
      */
     public function getSumOfPrimes($limit = 20)
     {
+        // intialize some starters
         $sum = 0;
+        $primeNumbers = [];
 
-        // start with some known ones
-        $primeNumbers = [2, 3, 5, 7, 11];
-
-        // each number from 11 to 2000000
-        for ($i = 12; $i < $limit; $i++) {
+        // each number from 2 to 2000000
+        for ($i = 2; $i < $limit; $i++) {
 
             // loop through all previous prime numbers
             foreach ($primeNumbers as $primeNumber) {

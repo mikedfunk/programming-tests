@@ -36,7 +36,8 @@ class NumberFinderSpec extends ObjectBehavior
     public function it_gets_sum_of_primes()
     {
         $numbers = [
-            20 => 49,
+            10 => 17,
+            20 => 77,
             // this will take a long time...
             2000000 => 142913828922,
         ];
