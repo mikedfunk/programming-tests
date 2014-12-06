@@ -1,7 +1,17 @@
 <?php
-
+/**
+ * programming tests
+ *
+ * @package ProgrammingTests
+ * @license MIT License <http://opensource.org/licenses/mit-license.html>
+ */
 namespace ProgrammingTests;
 
+/**
+ * NumberFinder
+ *
+ * @author Michael Funk <mike@mikefunk.com>
+ */
 class NumberFinder
 {
 
