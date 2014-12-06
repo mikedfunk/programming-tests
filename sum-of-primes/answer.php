@@ -1,5 +1,7 @@
 <?php
 
+$sum = 0;
+
 // start with some known ones
 $primeNumbers = [2, 3, 5, 7, 11];
 
@@ -15,5 +17,6 @@ for ($i = 12; $i < 2000000; $i++) {
     }
     // if it's passed the divisible check on the lower numbers, it's prime
     $primeNumbers[] = $i;
-    echo "$i\n";
+    $sum += $i;
 }
+echo $sum;
