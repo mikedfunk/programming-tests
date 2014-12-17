@@ -23,12 +23,8 @@ class File
      */
     public function getProductDetails($fileName)
     {
-        // get rid of the possible "copy" or " - copy" text
-        // this way we don't have to worry about dash or space separation
-        $fileName = preg_replace('/( - )?copy/', '', $fileName);
-
-        // now match the rest
-        $regex = "/([:\w-\s]+)[-\s](\w+)[-\s](\d+)\..*/";
+        // match just the things we need
+        $regex = "/([\w-\s]+)[-\s](\w+)[-\s](\d+)(?:(?:\s-\s)?copy)?\..*/";
         preg_match($regex, $fileName, $matches);
 
         // get rid of the first element which is the whole thing
