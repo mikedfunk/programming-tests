@@ -17,7 +17,7 @@ class NumberFinder
 {
 
     /**
-     * getPrimeNumbers
+     * getPrimeNumbers using the sieve of eratosthenes
      *
      * @param int $limit don't return any prime numbers higher than this
      * @return array all prime numbers up to the limit
