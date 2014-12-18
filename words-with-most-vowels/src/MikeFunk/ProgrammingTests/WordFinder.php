@@ -34,12 +34,10 @@ class WordFinder
         $vowelCounts = [];
         foreach ($words as $word) {
             preg_match_all('/[aeiou]/', $word, $matches);
-            $vowelCounts[$word] = count(array_shift($matches));
+            $vowelCounts[count(array_shift($matches))] = $word;
         }
         // return the biggest one
-        asort($vowelCounts);
-        end($vowelCounts);
-
-        return key($vowelCounts);
+        ksort($vowelCounts);
+        return end($vowelCounts);
     }
 }

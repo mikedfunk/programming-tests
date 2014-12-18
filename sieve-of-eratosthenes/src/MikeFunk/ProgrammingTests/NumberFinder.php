@@ -32,15 +32,15 @@ class NumberFinder
         $integers = array_flip(range($pointer, $limit));
 
         // go through all integers between here and the limit
-        foreach ($integers as $integer => $isMarked) {
+        foreach ($integers as $integer => $notPrime) {
             // mark all multiples of the pointer between here and the limit
             for ($i = $pointer; $pointer * $i <= $limit; $i++) {
-                $integers[$pointer * $i] = 'marked';
+                $integers[$pointer * $i] = 'notPrime';
             }
 
             // go to the next unmarked value greater than p
             foreach ($integers as $key => $value) {
-                if ($key > $pointer && $value != 'marked') {
+                if ($key > $pointer && $value != 'notPrime') {
                     $pointer = $key;
                     break;
                 }
@@ -52,7 +52,7 @@ class NumberFinder
             array_filter(
                 $integers,
                 function ($value) {
-                    return $value !== 'marked';
+                    return $value !== 'notPrime';
                 }
             )
         );
