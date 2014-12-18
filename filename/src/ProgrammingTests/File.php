@@ -24,7 +24,7 @@ class File
     public function getProductDetails($fileName)
     {
         // match just the things we need
-        $regex = "/([\w-\s]+)[-\s](\w+)[-\s](\d+)(?:(?:\s-\s)?copy)?\..*/";
+        $regex = "/([\w-\s]+)[-\s](\w+)[-\s](\d+)(?:(?:\s-\s)?copy)?\.(?:JPEG|jpg|gif)/";
         preg_match($regex, $fileName, $matches);
 
         // get rid of the first element which is the whole thing
