@@ -34,7 +34,7 @@ class NumberFinder
         // go through all integers between here and the limit
         foreach ($integers as $integer => $isMarked) {
             // mark all multiples of the pointer between here and the limit
-            for ($i = $pointer; $i * $pointer <= $limit; $i++) {
+            for ($i = $pointer; $pointer * $i <= $limit; $i++) {
                 $integers[$pointer * $i] = 'marked';
             }
 
