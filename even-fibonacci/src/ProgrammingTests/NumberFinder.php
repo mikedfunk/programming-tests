@@ -28,7 +28,7 @@ class NumberFinder
 
         // loop through all numbers from 90 to 4 million
         $i = 90;
-        while ($i <= 4000000) {
+        while ($i <= $limit) {
             $lastTwo = array_slice($fibonacciNumbers, -2, 2);
             $fibonacciNumbers[] = $i = array_sum($lastTwo);
         }
